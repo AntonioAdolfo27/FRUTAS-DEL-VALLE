@@ -1,406 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRUTAS DEL VALLE</title>
-    <link rel="icon" href="logo frutas y verduras-01-01.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frutas y Verduras del Valle | Supermercado en línea</title>
+<meta name="description" content="Frutas, verduras y productos frescos directo de agricultores locales. Pedidos al por mayor y entrega inmediata en Santo Domingo, Santiago, La Vega, Moca y San Cristóbal.">
+<link rel="icon" href="logo frutas y verduras-01-01.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-      <header class="header">
-        <div class="menu container"> 
-            <a href="https://www.alamy.es/imagenes/granjas-de-fruta.html?sortBy=relevant" class="logo"><img src="img/logo frutas y verduras-01.png" width="80px"  alt=""></a>
-            <input type="checkbox" id="menu"/>
-            <label for="menu">
-              <img src="menu.png" class="menu-icono" alt="">    
-            </label>
+<div class="topbar"><div class="container"><span>Entrega inmediata y encargos al por mayor</span><span>Pagos: efectivo, tarjeta, bonos y tarjeta gubernamental</span></div></div>
 
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#informacion">inicio</a></li>
-                    <li><a href="#servicio">Servicio</a></li>
-                    <li><a href="#product">Producto</a></li>
-                    <li><a href="https://fruttissimo.com.do/">Market en Linea</a></li>
-                    <li><a href="http://mercagranada.es/tecnicas-fruta-verdura-vender-mas/">Tecnicas de venta</a></li>
-                    <li><a href="#correo">Contacto</a></li>
-                    
-                </ul>
-            </nav>
+<header class="site-header">
+ <div class="container head-row">
+  <a href="#inicio" class="logo"><img src="img/logo frutas y verduras-01.png" alt="Frutas y Verduras del Valle" width="72" height="72"></a>
+  <form class="search" role="search" id="searchForm">
+   <label class="sr" for="q">Buscar productos</label>
+   <input id="q" type="search" placeholder="Busca manzanas, tomates, mangos..." autocomplete="off">
+   <button type="submit">Buscar</button>
+  </form>
+  <button class="cart-btn" id="openCart" type="button" aria-label="Abrir carrito">
+   <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 11.5a2 2 0 0 0 2 1.5h8a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+   <span class="cart-label">Mi carrito<b id="cartTotalTop">$0.00</b></span><i id="cartCount">0</i>
+  </button>
+ </div>
+ <nav class="cats" aria-label="Categorías"><div class="container" id="catNav"></div></nav>
+</header>
 
-            <div>
-                <ul>
-                    <li class="submenu">
-                        <img src="car.svg" id="img-carrito">
+<main id="inicio">
+ <section class="hero"><div class="container hero-grid">
+  <div>
+   <p class="tag">Del campo a tu mesa</p>
+   <h1>Frutas y verduras frescas, a precio de mercado</h1>
+   <p>Trabajamos directo con agricultores locales para que cada producto llegue a tu hogar fresco y en su punto. Arma tu pedido en minutos y recíbelo en tu ciudad.</p>
+   <div class="hero-cta"><a class="btn" href="#productos">Comprar ahora</a><a class="btn alt" href="#tiendas">Ver locales</a></div>
+  </div>
+  <img src="rigth.png" alt="Frutas y verduras frescas" width="520" height="420">
+ </div></section>
 
-                        <div id="carrito">
-                            <table id="lista-carrito">
-                                <thead>
-                                    <tr>
-                                        <th>image</th>
-                                        <th>nombre</th>
-                                        <th>precio</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>|
-                            <a href="#" id="finalizar-compra" class="btn-2">Finalizar Compra</a>
-                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
-                        </div>
+ <section class="benefits"><div class="container grid3">
+  <div><img src="i1.svg" alt="" width="36" height="36"><h3>Locales</h3><p>Santo Domingo, Santiago, La Vega, Moca y San Cristóbal.</p></div>
+  <div><img src="i2.svg" alt="" width="36" height="36"><h3>Métodos de pago</h3><p>Tarjeta de crédito, efectivo, bonos y tarjeta gubernamental.</p></div>
+  <div><img src="i3.svg" alt="" width="36" height="36"><h3>Envíos</h3><p>Encargos al por mayor y entrega inmediata.</p></div>
+ </div></section>
 
-                    </li>
-                </ul>
+ <section class="container block" id="ofertas">
+  <div class="block-head"><h2>Ofertas de la semana</h2></div>
+  <div class="deals">
+   <a href="#productos" class="deal"><span class="badge">Oferta</span><img src="f1.png" alt="" loading="lazy"><h3>Blackberry zarzamora</h3><p>Importada</p></a>
+   <a href="#productos" class="deal"><span class="badge">Oferta</span><img src="f2.png" alt="" loading="lazy"><h3>Jugo de naranja</h3><p>Natural del valle</p></a>
+   <a href="#productos" class="deal"><span class="badge">Oferta</span><img src="f3.png" alt="" loading="lazy"><h3>Limonada fresh</h3><p>Agua saborizada</p></a>
+   <a href="#productos" class="deal"><span class="badge">Oferta</span><img src="f4.png" alt="" loading="lazy"><h3>Granola 12 oz</h3><p>Orgánica</p></a>
+  </div>
+ </section>
 
-            </div>
-        </div>
+ <section class="container block" id="productos">
+  <div class="block-head">
+   <h2>Productos destacados</h2>
+   <div class="tools"><span id="resultInfo" aria-live="polite"></span>
+    <label class="sr" for="sort">Ordenar</label>
+    <select id="sort"><option value="">Orden recomendado</option><option value="asc">Precio: menor a mayor</option><option value="desc">Precio: mayor a menor</option><option value="name">Nombre A-Z</option></select>
+   </div>
+  </div>
+  <div class="products" id="grid"></div>
+ </section>
 
-        <div class="header-content container">
-            <div class="header-txt">
-                <span>Oferta</span>
-                <h1>Frutas y verduras del valle</h1>
-                <p id="informacion">Nos enorgullece ofrecerte lo mejor de la naturaleza directamente a tu mesa. Nuestro compromiso con la frescura y la calidad es insuperable, ya que trabajamos directamente con agricultores locales para asegurarnos de que cada fruta y verdura que llega a tu hogar sea un festín para tus sentidos. </p>
-                <a href="#correo" class="btn-1" id="informacion">informacion</a>
-            </div>
+ <section class="container block" id="tiendas">
+  <div class="block-head"><h2>Nuestros locales</h2></div>
+  <div class="stores"><img src="1.png" alt="Local Frutas del Valle" loading="lazy"><img src="2.png" alt="Local Frutas del Valle" loading="lazy"><img src="3.png" alt="Local Frutas del Valle" loading="lazy"></div>
+ </section>
+</main>
 
-            <div class="header-img">
-                <img src="rigth.png" alt="">
-            </div>
-        </div>
-      </header>
+<footer class="site-footer" id="contacto">
+ <div class="container foot-grid">
+  <div><img src="img/logo frutas y verduras-01.png" alt="" width="64" height="64"><p>Frescura y calidad directo de agricultores locales, desde 2024.</p></div>
+  <div><h3>Tiendas</h3><p>Santo Domingo<br>Santiago<br>La Vega<br>Moca<br>San Cristóbal</p></div>
+  <div><h3>Compra</h3><p><a href="#ofertas">Ofertas</a><br><a href="#productos">Productos</a><br><a href="https://fruttissimo.com.do/" target="_blank" rel="noopener">Market en línea</a></p></div>
+  <div class="dev"><h3>Desarrollo web</h3><img src="IMAGEN DE ANTONIO.jpg" alt="Antonio Adolfo" width="64" height="64"><p><b>Antonio Adolfo</b><br>Programador web</p></div>
+ </div>
+ <div class="container legal"><span>© <span id="yr"></span> Frutas y Verduras del Valle. Todos los derechos reservados.</span></div>
+</footer>
 
-      <section class="informacion container" id="servicio">
-         <div class="informacion-cotent" >
-
-            <div class="informacion-1" >
-                <img src="i1.svg" alt="">
-                <h3>Locales</h3>
-                <p>santo domingo<br> santiago<br> la vega<br> moca<br> san cristobal.</p>
-            </div>
-    
-
-                <div class="informacion-1">
-                   <img src="i2.svg" alt="">
-                   <h3>Metodos de Pagos</h3>
-                   <p>tarjeta de creditos<br> efectivo<br> bonos<br> tarjeta gubernametal.</p>
-               </div>
-
-             <div class="informacion-1" id="1">
-                <img src="i3.svg" alt="">
-                <h3>Envios</h3>
-                <p>Encargos al por mayor<br> entrega inmediata</p>
-             </div>
-
-         </div>
-      </section>
-              <h3 class="oferta-4">OFERTAS</h3>
-      <section class="oferta container">
-          
-        <div class="oferta-1">
-         
-             <img src="f1.png" alt="">
-             <h3>blackberry zarzamora</h3>
-             <p>Importada</p>
-             
-            
-        </div>
-
-        <div class="oferta-1">
-            <img src="f2.png" alt="">
-            <h3>Jugo de naranja</h3>
-            <p>Natural del valle</p>
-            
-        </div>
-
-        <div class="oferta-1">
-            <img src="f3.png" alt="">
-            <h3>Limonada Fresh</h3>
-            <p>Agua saborisada</p>
-            
-        </div>
-
-        <div class="oferta-1">
-            <img src="f4.png" alt="">
-            <h3>Granola 12,onz</h3>
-            <p>Organico</p>
-            
-        </div>
-      </section>
-
-      <main class="products container" id="lista-1">
-        <h2 id="product">Productos destacados</h2>
-
-        <div class="product-content">
-            
-            <div class="product">
-               <img src="pr8.png">
-               <div class="product-txt">
-                     <h3>Espinaca</h3>
-                     <p class="presio">$5.03</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="1">agregar</a>
-               </div>
-            </div>
-
-            <div class="product">
-                <img src="pr1.png" alt="">
-                <div class="product-txt">
-                      <h3>Manzanas</h3>
-                      <p class="presio">$05.09</p>
-                      <a href="#" class="agregar-carrito btn-2" data-id="1">agregar</a>
-                </div>
-             </div>
-
-            <div class="product">
-                <img src="pr2.png" alt="">
-                <div class="product-txt">
-                     <h3>Naranja Agria</h3>
-                     <p class="presio">$15.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="2">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="pr3.png" alt="">
-                <div class="product-txt">
-                     <h3>Uvas Frescas</h3>
-                     <p class="presio">$15.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="3">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="pr4.png" alt="">
-                <div class="product-txt">
-                     <h3>Mora Bracileña</h3>
-                     <p class="presio">$25.49</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="4">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="pr5.png" alt="">
-                <div class="product-txt">
-                     <h3>Fresas Rojas</h3>
-                     <p class="presio">$18.18</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="5">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="frutas varidas.png" alt="">
-                <div class="product-txt">
-                     <h3>Frutal para jugos</h3>
-                     <p class="presio">$52.13</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="canasta vegetariana.png" alt="">
-                <div class="product-txt">
-                     <h3>Canasta vegetariana</h3>
-                     <p class="presio">$34.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="mango.png" alt="">
-                <div class="product-txt">
-                     <h3>Mangos</h3>
-                     <p class="presio">$2.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="pera.png" alt="">
-                <div class="product-txt">
-                     <h3>Pera</h3>
-                     <p class="presio">$3.05</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="pr6.png" alt="">
-                <div class="product-txt">
-                     <h3>Guineos maduros</h3>
-                     <p class="presio">$0.90</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="manzana verde.png" alt="">
-                <div class="product-txt">
-                     <h3>manzana verde</h3>
-                     <p class="presio">$1.02</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="mixto.png" alt="">
-                <div class="product-txt">
-                     <h3>Ensalada Mixta</h3>
-                     <p class="presio">$4.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="piña.png" alt="">
-                <div class="product-txt">
-                     <h3>Piña</h3>
-                     <p class="presio">$09.01</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="plato de frutas.png" alt="">
-                <div class="product-txt">
-                     <h3>Plato de frutas</h3>
-                     <p class="presio">$6.50</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="sandia.png" alt="">
-                <div class="product-txt">
-                     <h3>Sandia</h3>
-                     <p class="presio">$4.95</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="tomates.png" alt="">
-                <div class="product-txt">
-                     <h3>Tomates</h3>
-                     <p class="presio">$05.02</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="zanahoria.png" alt="">
-                <div class="product-txt">
-                     <h3>zanahoria persa</h3>
-                     <p class="presio">$2.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="sazon natural.png" alt="">
-                <div class="product-txt">
-                     <h3>sazón natural</h3>
-                     <p class="presio">$1.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="aguacate.png" alt="">
-                <div class="product-txt">
-                    <h3>Aguacate</h3>
-                    <p class="presio">$2.00</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="7">agregar</a>
-                </div>
-             </div>
-
-             
-             <div class="product">
-                <img src="cereza amarga.png" alt="">
-                <div class="product-txt">
-                     <h3>cereza amarga</h3>
-                     <p class="presio">$3.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="limon.png" alt="">
-                <div class="product-txt">
-                     <h3>limon</h3>
-                     <p class="presio">$4.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="Franbuesas.png" alt="">
-                <div class="product-txt">
-                     <h3>Franbuesas</h3>
-                     <p class="presio">$9.00</p>
-                     <a href="#" class="agregar-carrito btn-2" data-id="6">agregar</a>
-                </div>
-             </div>
-
-             <div class="product">
-                <img src="granada.png" alt="">
-                <div class="product-txt">
-                    <h3>granada</h3>
-                    <p class="presio">$5.00</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="7">agregar</a>
-                </div>
-             </div>
-
-        </div>
-      </main>
-
-    <section class="Service">
-        
-        <div class="Service-1">
-            <img class="store" src="1.png" alt="">
-        </div>
-
-        <div class="Service-2">
-            <img class="store" src="2.png" alt="">
-        </div>
-
-        <div class="Service-3">
-            <img class="store" src="3.png" alt="">
-        </div>
-
-        
-    </section>
-
-         <section class="contacto container">
-
-                 <form id="correo">
-                    <input type="nonbre" placeholder="nombre">
-                    <input type="email" placeholder="correo">
-                    <input type="submit" class="btn-3">
-                    
-                 
-                 </form>
-
-         </section>
-    <footer class="footer">
-        <h2 class="informacion0">COLABORADORES</h2>
-        <div class="footer-content container">
-        
-
-                <div class="link">
-                    <img class="Antonio" src="IMAGEN DE ANTONIO.jpg" alt="">
-                    <h3>Antonio Adolfo</h3>
-                    <ul>
-                        <li><a href="#"></a>Programador Web.</li>
-                        <p>"El éxito no es definitivo, el fracaso no es fatal: lo que cuenta es el coraje para continuar".</p>
-                    </ul>  
-                </div>    
-            <P class="eslogan"> 04/02/2024 </P>
-            <a href="#" class="btn-1" id="inicio">inicio</a>
-    </footer>
-    <script src="script.js"></script>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+ <div class="drawer-head"><h2>Tu carrito</h2><button type="button" id="closeCart" aria-label="Cerrar carrito">&times;</button></div>
+ <div class="drawer-body" id="cartList"></div>
+ <div class="drawer-foot" id="cartFoot">
+  <div class="sum"><span>Total estimado</span><b id="cartTotal">$0.00</b></div>
+  <form id="orderForm" novalidate>
+   <input id="oName" placeholder="Nombre y apellido" autocomplete="name" required>
+   <input id="oPhone" type="tel" placeholder="Teléfono" autocomplete="tel" required>
+   <input id="oAddr" placeholder="Dirección de entrega" autocomplete="street-address" required>
+   <select id="oPay" aria-label="Método de pago"><option>Efectivo</option><option>Tarjeta de crédito</option><option>Bonos</option><option>Tarjeta gubernamental</option></select>
+   <p class="err" id="orderErr" role="alert"></p>
+   <button class="btn block-btn" type="submit">Enviar pedido por WhatsApp</button>
+  </form>
+  <button class="link" type="button" id="clearCart">Vaciar carrito</button>
+ </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
 </body>
-
 </html>
-
-
